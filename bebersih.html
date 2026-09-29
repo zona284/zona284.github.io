@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Bebersih: Petualangan Kebersihan! - Profil Game & Kebijakan Privasi | Qin Studio</title>
+    <meta name="title" content="Bebersih: Petualangan Kebersihan! - Profil Game & Kebijakan Privasi | Qin Studio">
+    <meta name="description"
+        content="Profil resmi dan Kebijakan Privasi game edukasi anak Bebersih: Petualangan Kebersihan! 100% offline, ramah anak & keluarga, kepatuhan penuh Google Play Families Policy & COPPA.">
+    <meta name="keywords"
+        content="Bebersih, game anak, game edukasi, cuci piring, sikat gigi, pilah sampah, flutter game, privacy policy, kebijakan privasi, COPPA, Google Play Families, Qin Studio">
+    <meta name="author" content="Qin Studio - Mohammad Rakha Mauludi">
+    <meta name="theme-color" content="#0284c7">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zona284.github.io/bebersih.html">
+    <meta property="og:title" content="Bebersih: Petualangan Kebersihan! - Profil & Kebijakan Privasi">
+    <meta property="og:description"
+        content="Game edukasi interaktif 2D anak usia dini & keluarga. 100% Offline, ramah anak, iklan terfilter G-Rating, mematuhi standar privasi COPPA.">
+    <meta property="og:image" content="https://zona284.github.io/img/bebersih/feature_graphic_1024x500.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zona284.github.io/bebersih.html">
+    <meta property="twitter:title" content="Bebersih: Petualangan Kebersihan! - Profil & Kebijakan Privasi">
+    <meta property="twitter:description"
+        content="Game edukasi kebersihan untuk anak & keluarga. 100% offline, bebas pelacakan data, ramah anak.">
+    <meta property="twitter:image" content="https://zona284.github.io/img/bebersih/feature_graphic_1024x500.png">
+
+    <link rel="icon" type="image/png" href="img/bebersih/icon_512x512.png">
+
+    <!-- Google Fonts: Fredoka (Friendly/Playful Headings) & Plus Jakarta Sans (Clean Legible Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Palette: Fresh Clean Water & Soft Candy Colors */
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --primary-light: #e0f2fe;
+            --primary-soft: #f0f9ff;
+            --accent-green: #10b981;
+            --accent-green-light: #d1fae5;
+            --accent-yellow: #f59e0b;
+            --accent-yellow-light: #fef3c7;
+            --accent-purple: #8b5cf6;
+            --accent-purple-light: #ede9fe;
+            --accent-coral: #f43f5e;
+            --accent-coral-light: #ffe4e6;
+
+            --text-heading: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --border-focus: #38bdf8;
+
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 20px 25px -5px rgba(2, 132, 199, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+
+            --font-heading: 'Fredoka', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.7;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Ambient Bubble Animations */
+        .bubble-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .ambient-bubble {
+            position: absolute;
+            bottom: -80px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(56, 189, 248, 0.25) 60%, rgba(2, 132, 199, 0.35));
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 10px rgba(56, 189, 248, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+            animation: floatUp infinite linear;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .ambient-bubble:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.65;
+            }
+
+            85% {
+                opacity: 0.65;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Top Banner & Header */
+        header.site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-heading);
+        }
+
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 3px 6px rgba(2, 132, 199, 0.25);
+            object-fit: cover;
+            transition: transform 0.25s ease;
+        }
+
+        .brand-link:hover .brand-icon {
+            transform: scale(1.06) rotate(-3deg);
+        }
+
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.15;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .brand-dev {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            background: #f1f5f9;
+            padding: 4px;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-tab-btn {
+            border: none;
+            background: transparent;
+            color: var(--text-body);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 18px;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-tab-btn:hover {
+            color: var(--primary);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .nav-tab-btn.active {
+            background: var(--card-bg);
+            color: var(--primary);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            font-weight: 700;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-portfolio {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: var(--radius-full);
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .btn-portfolio:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+
+        /* Main Container */
+        .main-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px 20px 80px;
+        }
+
+        /* Hero Card */
+        .hero-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .hero-banner-wrap {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            background: linear-gradient(135deg, #0284c7 0%, #38bdf8 50%, #bae6fd 100%);
+            overflow: hidden;
+        }
+
+        .hero-banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-card:hover .hero-banner-img {
+            transform: scale(1.02);
+        }
+
+        .hero-banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.15) 50%, transparent 100%);
+        }
+
+        .hero-content {
+            padding: 24px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+        }
+
+        .hero-header-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .hero-identity {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: -64px;
+        }
+
+        .hero-app-icon {
+            width: 104px;
+            height: 104px;
+            border-radius: 22px;
+            border: 4px solid #ffffff;
+            box-shadow: var(--shadow-xl);
+            background: #ffffff;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-titles h1 {
+            font-family: var(--font-heading);
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-titles .hero-tagline {
+            font-size: 1.05rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .hero-badges-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .badge-offline {
+            background-color: var(--accent-green-light);
+            color: #065f46;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .badge-family {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border: 1px solid rgba(2, 132, 199, 0.3);
+        }
+
+        .badge-ads {
+            background-color: var(--accent-yellow-light);
+            color: #92400e;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .badge-coppa {
+            background-color: var(--accent-purple-light);
+            color: #5b21b6;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .hero-desc {
+            font-size: 1.02rem;
+            color: var(--text-body);
+            max-width: 880px;
+            line-height: 1.75;
+        }
+
+        .hero-action-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding-top: 8px;
+        }
+
+        .btn-action-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 12px 24px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-action-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(2, 132, 199, 0.45);
+        }
+
+        .btn-action-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 12px 22px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            border: 2px solid var(--primary-light);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-action-secondary:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary);
+        }
+
+        /* Tab Content Containers */
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Card Section Component */
+        .content-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            padding: 32px;
+            margin-bottom: 28px;
+        }
+
+        .card-header-styled {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--primary-light);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-title-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        h2.section-heading {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            line-height: 1.25;
+        }
+
+        h3.sub-heading {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-heading);
+            margin: 22px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p.section-lead {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            margin-bottom: 18px;
+            line-height: 1.75;
+        }
+
+        /* Highlight Notice Box */
+        .alert-callout {
+            border-radius: var(--radius-md);
+            padding: 18px 22px;
+            margin: 20px 0;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .alert-callout.info {
+            background-color: var(--primary-soft);
+            border-left: 5px solid var(--primary);
+            color: #0369a1;
+        }
+
+        .alert-callout.success {
+            background-color: #ecfdf5;
+            border-left: 5px solid var(--accent-green);
+            color: #065f46;
+        }
+
+        .alert-callout.warning {
+            background-color: #fffbeb;
+            border-left: 5px solid var(--accent-yellow);
+            color: #92400e;
+        }
+
+        .alert-callout-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .alert-callout-text h4 {
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .alert-callout-text p {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* ==================================================== */
+        /* CAROUSEL COMPONENT SYSTEM (Screenshots & Level Cards) */
+        /* ==================================================== */
+        .carousel-box {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .carousel-header-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            gap: 12px;
+        }
+
+        .carousel-status-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .carousel-counter-badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            letter-spacing: 0.02em;
+        }
+
+        .carousel-arrows {
+            display: flex;
+            gap: 8px;
+        }
+
+        .carousel-arrow-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .carousel-arrow-btn:hover:not(:disabled) {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        .carousel-arrow-btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            border-color: var(--border-color);
+        }
+
+        .carousel-viewport {
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            position: relative;
+            touch-action: pan-y pinch-zoom;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+            width: 100%;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Screenshot Carousel Slide Specifics */
+        .screenshot-card-carousel {
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .screenshot-card-carousel:hover {
+            box-shadow: var(--shadow-xl);
+            border-color: var(--border-focus);
+            transform: translateY(-2px);
+        }
+
+        .screenshot-thumb-wrap {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: #0f172a;
+            overflow: hidden;
+        }
+
+        .screenshot-thumb-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .screenshot-card-carousel:hover .screenshot-thumb-wrap img {
+            transform: scale(1.03);
+        }
+
+        .screenshot-overlay-icon {
+            position: absolute;
+            inset: 0;
+            background: rgba(2, 132, 199, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .screenshot-card-carousel:hover .screenshot-overlay-icon {
+            opacity: 1;
+        }
+
+        .screenshot-card-footer {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .screenshot-card-info h4 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: var(--text-heading);
+            margin-bottom: 2px;
+        }
+
+        .screenshot-card-info p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .screenshot-tag {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: var(--radius-full);
+            background: var(--primary-light);
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Level Cards Carousel Specifics */
+        .level-slide-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 26px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            transition: all 0.25s ease;
+            min-height: 250px;
+        }
+
+        .level-slide-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .level-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .level-badge {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            color: #ffffff;
+        }
+
+        .level-1-badge { background: linear-gradient(135deg, #0284c7, #38bdf8); }
+        .level-2-badge { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+        .level-3-badge { background: linear-gradient(135deg, #10b981, #34d399); }
+        .level-4-badge { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+
+        .level-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .level-desc {
+            font-size: 1rem;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        .level-mechanics {
+            font-size: 0.9rem;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            margin-top: auto;
+        }
+
+        .level-mechanics strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Carousel Navigation Dots */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: var(--radius-full);
+            background: #cbd5e1;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            padding: 0;
+        }
+
+        .carousel-dot.active {
+            width: 28px;
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        /* Extra Level Info Section */
+        .extra-levels-box {
+            margin-top: 32px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+            border-radius: var(--radius-md);
+            padding: 24px;
+        }
+
+        .extra-levels-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .extra-levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .extra-level-item {
+            background: #ffffff;
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            border: 1px solid rgba(186, 230, 253, 0.8);
+            box-shadow: 0 1px 3px rgba(2, 132, 199, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            transition: transform 0.2s ease;
+        }
+
+        .extra-level-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .extra-level-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .extra-level-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .extra-level-name {
+            font-family: var(--font-heading);
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .extra-level-desc {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* UX Pillars Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            padding: 22px;
+            transition: all 0.2s ease;
+        }
+
+        .feature-box:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature-icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+        }
+
+        .icon-blue {
+            background: var(--primary-light);
+        }
+
+        .icon-green {
+            background: var(--accent-green-light);
+        }
+
+        .icon-yellow {
+            background: var(--accent-yellow-light);
+        }
+
+        .icon-purple {
+            background: var(--accent-purple-light);
+        }
+
+        .feature-box h4 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-bottom: 6px;
+        }
+
+        .feature-box p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+
+        /* Policy & Terms Clauses Typography */
+        .legal-clause {
+            margin-bottom: 28px;
+        }
+
+        .legal-clause h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--text-heading);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .clause-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .legal-clause p,
+        .legal-clause ul {
+            font-size: 0.98rem;
+            color: var(--text-body);
+            line-height: 1.75;
+            margin-bottom: 12px;
+        }
+
+        .legal-clause ul {
+            padding-left: 24px;
+        }
+
+        .legal-clause li {
+            margin-bottom: 8px;
+        }
+
+        .badge-verified-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #065f46;
+            background: #d1fae5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 6px;
+        }
+
+        /* Print Button & Tooling */
+        .tools-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .last-updated {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-print {
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+            color: var(--text-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-print:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: var(--primary-soft);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            cursor: zoom-out;
+            animation: modalFade 0.2s ease;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        @keyframes modalFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .lightbox-dialog {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            cursor: default;
+            position: relative;
+        }
+
+        .lightbox-dialog img {
+            width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            background: #0f172a;
+            display: block;
+        }
+
+        .lightbox-footer {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+        }
+
+        .lightbox-title {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .lightbox-close-btn {
+            background: #f1f5f9;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-body);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .lightbox-close-btn:hover {
+            background: #e2e8f0;
+            color: #ef4444;
+        }
+
+        /* Footer */
+        footer.site-footer {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: var(--text-body);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 12px 16px;
+            }
+
+            .brand-link {
+                justify-content: center;
+            }
+
+            .nav-tabs {
+                width: 100%;
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 4px;
+            }
+
+            .nav-tab-btn {
+                padding: 8px 14px;
+                font-size: 0.85rem;
+                flex-shrink: 0;
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            .hero-card {
+                border-radius: var(--radius-md);
+            }
+
+            .hero-banner-wrap {
+                height: 180px;
+            }
+
+            .hero-content {
+                padding: 20px 16px 24px;
+            }
+
+            .hero-identity {
+                margin-top: -48px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .hero-app-icon {
+                width: 76px;
+                height: 76px;
+                border-radius: 16px;
+            }
+
+            .hero-titles h1 {
+                font-size: 1.6rem;
+            }
+
+            .content-card {
+                padding: 20px 16px;
+                border-radius: var(--radius-md);
+            }
+
+            h2.section-heading {
+                font-size: 1.35rem;
+            }
+
+            .levels-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print Media Styles for Privacy Policy */
+        @media print {
+            body {
+                background: #ffffff;
+                color: #000000;
+            }
+
+            .bubble-container,
+            header.site-header,
+            .hero-banner-wrap,
+            .hero-action-buttons,
+            .nav-tabs,
+            .btn-print,
+            footer.site-footer,
+            .lightbox-modal {
+                display: none !important;
+            }
+
+            .main-wrapper {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .tab-panel {
+                display: block !important;
+            }
+
+            #profile {
+                display: none !important;
+                /* Only print policy & terms cleanly */
+            }
+
+            .content-card {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Ambient Soap Bubbles Floating Animation (Matches the game's cleanliness & bubble popping theme) -->
+    <div class="bubble-container" id="bubbleContainer" aria-hidden="true"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="site-header" role="banner">
+        <div class="nav-container">
+            <a href="#profile" class="brand-link" onclick="switchTab('profile', event)">
+                <img src="img/bebersih/icon_512x512.png" alt="Logo Bebersih" class="brand-icon">
+                <div class="brand-info">
+                    <span class="brand-title">Bebersih 🧼</span>
+                    <span class="brand-dev">Qin Studio &bull; Mohammad Rakha Mauludi</span>
+                </div>
+            </a>
+
+            <!-- Navigation Tabs (Hash-linked for direct Google Play Store linking) -->
+            <nav class="nav-tabs" role="tablist" aria-label="Navigasi Halaman Bebersih">
+                <button class="nav-tab-btn active" id="tab-btn-profile" onclick="switchTab('profile', event)" role="tab"
+                    aria-selected="true" aria-controls="profile">
+                    <span>🎮</span> Profil Game
+                </button>
+                <button class="nav-tab-btn" id="tab-btn-privacy" onclick="switchTab('privacy', event)" role="tab"
+                    aria-selected="false" aria-controls="privacy">
+                    <span>🛡️</span> Kebijakan Privasi
+                </button>
+                <button class="nav-tab-btn" id="tab-btn-terms" onclick="switchTab('terms', event)" role="tab"
+                    aria-selected="false" aria-controls="terms">
+                    <span>📜</span> Syarat & Ketentuan
+                </button>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html" class="btn-portfolio" title="Kembali ke Portofolio Utama">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                    Portofolio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+
+        <!-- Hero Section Showcase Card -->
+        <section class="hero-card" aria-label="Banner Utama Bebersih">
+            <div class="hero-banner-wrap">
+                <img src="img/bebersih/feature_graphic_1024x500.png"
+                    alt="Feature Graphic Bebersih: Petualangan Kebersihan!" class="hero-banner-img">
+                <div class="hero-banner-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-header-row">
+                    <div class="hero-identity">
+                        <img src="img/bebersih/icon_512x512.png" alt="Icon Game Bebersih" class="hero-app-icon">
+                        <div class="hero-titles">
+                            <h1>Bebersih: Petualangan Kebersihan! 🧼✨</h1>
+                            <div class="hero-tagline">Game Edukasi 2D Interaktif Kebiasaan Hidup Bersih & Mandiri</div>
+                            <div class="hero-badges-strip">
+                                <span class="badge-pill badge-offline">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+                                    </svg>
+                                    100% Offline Game
+                                </span>
+                                <span class="badge-pill badge-family">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                    Anak & Keluarga (PAUD/TK 3–7 Thn)
+                                </span>
+                                <span class="badge-pill badge-coppa">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                    Kepatuhan COPPA & Google Play Families
+                                </span>
+                                <span class="badge-pill badge-ads">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 16v-4" />
+                                        <path d="M12 8h.01" />
+                                    </svg>
+                                    Iklan Ramah Anak (Rating G, Non-Personalized)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="hero-desc">
+                    <strong>Bebersih</strong> adalah game simulasi dan edukasi 2D interaktif yang dirancang khusus untuk
+                    anak-anak usia dini (TK / PAUD) dan keluarga. Membimbing si kecil mengenal langkah-langkah nyata
+                    merawat kebersihan diri dan lingkungan melalui pengalaman bermain yang ceria, bebas stres, aman, dan
+                    tanpa pengumpulan data pribadi.
+                </p>
+
+                <div class="hero-action-buttons">
+                    <button class="btn-action-primary" onclick="switchTab('profile', event)">
+                        <span>🎮</span> Jelajahi Profil & Mini-Game
+                    </button>
+                    <button class="btn-action-secondary" onclick="switchTab('privacy', event)">
+                        <span>🛡️</span> Baca Kebijakan Privasi
+                    </button>
+                    <button class="btn-action-secondary" onclick="switchTab('terms', event)">
+                        <span>📜</span> Syarat & Ketentuan
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 1: PROFIL GAME & SHOWCASE              -->
+        <!-- ========================================== -->
+        <section id="profile" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-profile">
+
+            <!-- Visi & Filosofi Game -->
+            <article class="content-card">
+                <div class="card-header-styled">
+                    <div class="card-title-group">
+                        <div class="card-title-icon">🌟</div>
+                        <div>
+                            <h2 class="section-heading">Visi Edukasi & Konsep Permainan</h2>
+                            <span class="last-updated">Belajar kebiasaan baik dengan cara yang menyenangkan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="section-lead">
+                    Menjaga kebersihan diri dan lingkungan adalah keterampilan hidup mendasar yang penting ditanamkan
+                    sejak usia emas anak. <strong>Bebersih</strong> mengubah kegiatan rutin sehari-hari menjadi
+                    petualangan visual interaktif yang memikat perhatian anak tanpa menimbulkan rasa jenuh atau
+                    frustrasi.
+                </p>
+
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-blue">🧼</div>
+                        <h4>Edukasi Praktis Nyata</h4>
+                        <p>Mengajarkan alur runut dari mencuci piring berbusa, menyikat kuman gigi, hingga mengenal
+                            pemilahan 4 jenis tempat sampah.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-green">⭐</div>
+                        <h4>Penguatan Positif</h4>
+                        <p>Setiap keberhasilan dirayakan dengan semburan konfeti ceria, animasi 3 bintang, dan efek
+                            suara gembira yang meningkatkan rasa percaya diri anak.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-yellow">🛡️</div>
+                        <h4>Bebas Frustrasi (No Stress)</h4>
+                        <p>Tidak ada batas waktu mematikan atau "Game Over" yang menakutkan. Kesalahan hanya memberikan
+                            pantulan lembut dan petunjuk ramah.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-purple">📴</div>
+                        <h4>Bermain Sepenuhnya Offline</h4>
+                        <p>Dapat dimainkan kapan saja di perjalanan, mobil, maupun di rumah tanpa ketergantungan kuota
+                            data internet aktif.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4 Level Mini-Game Edukatif Utama (Carousel) -->
+            <article class="content-card">
+                <div class="card-header-styled">
+                    <div class="card-title-group">
+                        <div class="card-title-icon">🎮</div>
+                        <div>
+                            <h2 class="section-heading">4 Level Mini-Game Edukatif Utama</h2>
+                            <span class="last-updated">Geser untuk menjelajahi tantangan kebersihan favorit anak</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="section-lead">
+                    Setiap level menghadirkan alur cerita unik dengan tugas kebersihan spesifik yang melatih koordinasi
+                    motorik halus, penalaran sebab-akibat, dan kepekaan lingkungan anak:
+                </p>
+
+                <!-- Level Carousel Component -->
+                <div class="carousel-box" id="levelCarouselBox">
+                    <div class="carousel-header-controls">
+                        <div class="carousel-status-info">
+                            <span class="carousel-counter-badge" id="levelCounter">Level 1 dari 4</span>
+                        </div>
+                        <div class="carousel-arrows">
+                            <button class="carousel-arrow-btn" id="levelPrevBtn" onclick="moveLevelSlide(-1)" aria-label="Level Sebelumnya">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                            </button>
+                            <button class="carousel-arrow-btn" id="levelNextBtn" onclick="moveLevelSlide(1)" aria-label="Level Berikutnya">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-viewport" id="levelViewport">
+                        <div class="carousel-track" id="levelTrack">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide">
+                                <div class="level-slide-card">
+                                    <div class="level-card-top">
+                                        <span class="level-badge level-1-badge">Level 1</span>
+                                        <span style="font-size: 1.5rem;">🍽️</span>
+                                    </div>
+                                    <h4 class="level-title">Mencuci Piring Kotor</h4>
+                                    <p class="level-desc">Bantu Ibu membersihkan tumpukan piring makan di wastafel dapur. Gosok spons berbusa sabun untuk menghapus noda makanan membandel secara bertahap sampai piring bersih bersinar.</p>
+                                    <div class="level-mechanics">
+                                        <strong>Mekanik Utama:</strong> <em>Real-time scrubbing</em> busa sabun melimpah & bilas air keran mengkilap.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide">
+                                <div class="level-slide-card">
+                                    <div class="level-card-top">
+                                        <span class="level-badge level-2-badge">Level 2</span>
+                                        <span style="font-size: 1.5rem;">🧸</span>
+                                    </div>
+                                    <h4 class="level-title">Merapikan Mainan di Kamar</h4>
+                                    <p class="level-desc">Kamar tidur berantakan setelah bermain seharian! Masukkan mobil balap, boneka beruang teddy, balok susun warna-warni, dan bebek karet ke dalam kotak mainan penyimpanan.</p>
+                                    <div class="level-mechanics">
+                                        <strong>Mekanik Utama:</strong> <em>Drag-and-drop</em> interaktif dengan efek bercahaya pada kotak mainan target.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide">
+                                <div class="level-slide-card">
+                                    <div class="level-card-top">
+                                        <span class="level-badge level-3-badge">Level 3</span>
+                                        <span style="font-size: 1.5rem;">🪥</span>
+                                    </div>
+                                    <h4 class="level-title">Menyikat Gigi Bersih & Sehat</h4>
+                                    <p class="level-desc">Lindungi gigi dari kuman penyebab gigi berlubang sebelum tidur malam. Usir monster kuman nakal di sela-sela gigi menggunakan sikat berodol busa putih.</p>
+                                    <div class="level-mechanics">
+                                        <strong>Mekanik Utama:</strong> Gestur <em>swipe</em> sikat gigi multi-arah, basmi kuman & kumur air segar.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-slide">
+                                <div class="level-slide-card">
+                                    <div class="level-card-top">
+                                        <span class="level-badge level-4-badge">Level 4</span>
+                                        <span style="font-size: 1.5rem;">♻️</span>
+                                    </div>
+                                    <h4 class="level-title">Memilah Sampah 4 Kategori</h4>
+                                    <p class="level-desc">Belajar mencintai kelestarian lingkungan di taman bermain. Mengenal 4 jenis tempat sampah: Hijau (Organik), Kuning (Anorganik), Biru (Kertas), dan Merah (Limbah B3).</p>
+                                    <div class="level-mechanics">
+                                        <strong>Mekanik Utama:</strong> Sortir drag-and-drop dengan fitur cerdas <em>smart bounce-back</em> jika salah tong.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level Carousel Dots -->
+                    <div class="carousel-dots" id="levelDots">
+                        <button class="carousel-dot active" onclick="jumpLevelSlide(0)" aria-label="Ke Level 1"></button>
+                        <button class="carousel-dot" onclick="jumpLevelSlide(1)" aria-label="Ke Level 2"></button>
+                        <button class="carousel-dot" onclick="jumpLevelSlide(2)" aria-label="Ke Level 3"></button>
+                        <button class="carousel-dot" onclick="jumpLevelSlide(3)" aria-label="Ke Level 4"></button>
+                    </div>
+                </div>
+
+                <!-- Informasi Level Menarik Lainnya -->
+                <div class="extra-levels-box">
+                    <h3 class="extra-levels-title">
+                        <span>🌟</span> Eksplorasi Petualangan & Level Menarik Lainnya
+                    </h3>
+                    <p style="font-size: 0.92rem; color: var(--text-body); margin-bottom: 16px;">
+                        Selain 4 level utama di atas, si kecil juga dapat membuka dan menaklukkan beragam level kejutan edukatif lainnya yang tak kalah seru:
+                    </p>
+                    <div class="extra-levels-grid">
+                        <div class="extra-level-item">
+                            <div class="extra-level-header">
+                                <span class="extra-level-name">🎓 Level 5: Kuis Cerdas Kebersihan</span>
+                                <span class="extra-level-tag">Tantangan Kelas</span>
+                            </div>
+                            <p class="extra-level-desc">Tanya jawab visual seru di papan tulis bersama Ibu Guru untuk membuka medali pahlawan kebersihan.</p>
+                        </div>
+
+                        <div class="extra-level-item">
+                            <div class="extra-level-header">
+                                <span class="extra-level-name">🧼 Level 6: Cuci Tangan 6 Langkah</span>
+                                <span class="extra-level-tag">Higienis</span>
+                            </div>
+                            <p class="extra-level-desc">Simulasi mencuci tangan standar kesehatan dengan sabun berbusa melimpah dan bilas air mengalir.</p>
+                        </div>
+
+                        <div class="extra-level-item">
+                            <div class="extra-level-header">
+                                <span class="extra-level-name">🚿 Level 7: Bersih Kamar Mandi</span>
+                                <span class="extra-level-tag">Eksplorasi</span>
+                            </div>
+                            <p class="extra-level-desc">Sikat ubin lantai yang licin dan gunakan wiper untuk membersihkan cipratan busa di cermin wastafel.</p>
+                        </div>
+
+                        <div class="extra-level-item">
+                            <div class="extra-level-header">
+                                <span class="extra-level-name">🧺 Level 8: Pilah Cucian Pakaian</span>
+                                <span class="extra-level-tag">Kemandirian</span>
+                            </div>
+                            <p class="extra-level-desc">Klasifikasi pakaian putih vs berwarna ke keranjang cucian dan putar mesin cuci otomatis.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Galeri Screenshot Interaktif (Carousel 4 Screenshot) -->
+            <article class="content-card">
+                <div class="card-header-styled">
+                    <div class="card-title-group">
+                        <div class="card-title-icon">📸</div>
+                        <div>
+                            <h2 class="section-heading">Tampilan Visual Permainan (Screenshots)</h2>
+                            <span class="last-updated">Geser foto atau ketuk untuk memperbesar tampilan resolusi tinggi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screenshot Carousel Component -->
+                <div class="carousel-box" id="screenshotCarouselBox">
+                    <div class="carousel-header-controls">
+                        <div class="carousel-status-info">
+                            <span class="carousel-counter-badge" id="screenshotCounter">Foto 1 dari 4</span>
+                        </div>
+                        <div class="carousel-arrows">
+                            <button class="carousel-arrow-btn" id="screenshotPrevBtn" onclick="moveScreenshotSlide(-1)" aria-label="Screenshot Sebelumnya">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                            </button>
+                            <button class="carousel-arrow-btn" id="screenshotNextBtn" onclick="moveScreenshotSlide(1)" aria-label="Screenshot Berikutnya">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="carousel-viewport" id="screenshotViewport">
+                        <div class="carousel-track" id="screenshotTrack">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide">
+                                <div class="screenshot-card-carousel" onclick="openLightbox('img/bebersih/screenshot_1_cuci_piring.png', 'Level 1: Mencuci Piring Kotor')">
+                                    <div class="screenshot-thumb-wrap">
+                                        <img src="img/bebersih/screenshot_1_cuci_piring.png" alt="Screenshot Level 1 Cuci Piring" loading="lazy">
+                                        <div class="screenshot-overlay-icon">🔍</div>
+                                    </div>
+                                    <div class="screenshot-card-footer">
+                                        <div class="screenshot-card-info">
+                                            <h4>Mencuci Piring Berbusa</h4>
+                                            <p>Gosok noda membandel dengan sabun dan bilas air keran</p>
+                                        </div>
+                                        <span class="screenshot-tag">Level 1</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide">
+                                <div class="screenshot-card-carousel" onclick="openLightbox('img/bebersih/screenshot_2_rapi_mainan.png', 'Level 2: Merapikan Mainan di Kamar')">
+                                    <div class="screenshot-thumb-wrap">
+                                        <img src="img/bebersih/screenshot_2_rapi_mainan.png" alt="Screenshot Level 2 Merapikan Mainan" loading="lazy">
+                                        <div class="screenshot-overlay-icon">🔍</div>
+                                    </div>
+                                    <div class="screenshot-card-footer">
+                                        <div class="screenshot-card-info">
+                                            <h4>Merapikan Mainan Kamar</h4>
+                                            <p>Tarik mainan ke dalam kotak bersinar dengan gestur sentuh</p>
+                                        </div>
+                                        <span class="screenshot-tag">Level 2</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide">
+                                <div class="screenshot-card-carousel" onclick="openLightbox('img/bebersih/screenshot_3_sikat_gigi.png', 'Level 3: Menyikat Gigi Bersih & Sehat')">
+                                    <div class="screenshot-thumb-wrap">
+                                        <img src="img/bebersih/screenshot_3_sikat_gigi.png" alt="Screenshot Level 3 Sikat Gigi" loading="lazy">
+                                        <div class="screenshot-overlay-icon">🔍</div>
+                                    </div>
+                                    <div class="screenshot-card-footer">
+                                        <div class="screenshot-card-info">
+                                            <h4>Menyikat Gigi & Usir Kuman</h4>
+                                            <p>Hilangkan kuman nakal dengan sikat berodol dan kumur bersih</p>
+                                        </div>
+                                        <span class="screenshot-tag">Level 3</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="carousel-slide">
+                                <div class="screenshot-card-carousel" onclick="openLightbox('img/bebersih/screenshot_4_pilah_sampah.png', 'Level 4: Memilah Sampah 4 Kategori')">
+                                    <div class="screenshot-thumb-wrap">
+                                        <img src="img/bebersih/screenshot_4_pilah_sampah.png" alt="Screenshot Level 4 Pilah Sampah" loading="lazy">
+                                        <div class="screenshot-overlay-icon">🔍</div>
+                                    </div>
+                                    <div class="screenshot-card-footer">
+                                        <div class="screenshot-card-info">
+                                            <h4>Memilah 4 Kategori Tong Sampah</h4>
+                                            <p>Kenali tong Organik, Anorganik, Kertas, dan B3 di taman</p>
+                                        </div>
+                                        <span class="screenshot-tag">Level 4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot Carousel Dots -->
+                    <div class="carousel-dots" id="screenshotDots">
+                        <button class="carousel-dot active" onclick="jumpScreenshotSlide(0)" aria-label="Ke Screenshot 1"></button>
+                        <button class="carousel-dot" onclick="jumpScreenshotSlide(1)" aria-label="Ke Screenshot 2"></button>
+                        <button class="carousel-dot" onclick="jumpScreenshotSlide(2)" aria-label="Ke Screenshot 3"></button>
+                        <button class="carousel-dot" onclick="jumpScreenshotSlide(3)" aria-label="Ke Screenshot 4"></button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Desain Ramah Anak (Kid-Friendly UX) -->
+            <article class="content-card">
+                <div class="card-header-styled">
+                    <div class="card-title-group">
+                        <div class="card-title-icon">🎈</div>
+                        <div>
+                            <h2 class="section-heading">Prinsip Desain Ramah Anak (Kid-Friendly UX)</h2>
+                            <span class="last-updated">Sentuhan ergonomis yang disesuaikan dengan motorik anak usia
+                                dini</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-yellow">🔘</div>
+                        <h4>Tombol 3D Bouncy</h4>
+                        <p>Semua tombol berukuran besar dengan bayangan 3D tebal dan animasi pantul empuk saat ditekan,
+                            memudahkan jari kecil anak menavigasi menu.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-blue">🫧</div>
+                        <h4>Gelembung Sabun Interaktif</h4>
+                        <p>Gelembung sabun beterbangan lembut di latar belakang yang bisa dipecahkan (*pop!*) langsung
+                            dengan sentuhan jari untuk sensasi bermain seru.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-purple">🔤</div>
+                        <h4>Tipografi Ramah 'Fredoka'</h4>
+                        <p>Menggunakan rupa huruf bulat, lembut, dan jelas terbaca bagi anak-anak yang sedang dalam fase
+                            belajar membaca huruf dan angka.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-circle icon-green">🎶</div>
+                        <h4>Umpan Balik Haptik & Audio</h4>
+                        <p>Setiap gosokan spons sabun, ketukan kuman, dan penyelesaian level memicu efek suara harmonis
+                            serta getaran taktil yang menyenangkan.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- TAB 2: KEBIJAKAN PRIVASI (PRIVACY POLICY)  -->
+        <!-- ========================================== -->
+        <section id="privacy" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-privacy">
+
+            <article class="content-card">
+                <div class="tools-bar">
+                    <div class="card-title-group">
+                        <div class="card-title-icon">🛡️</div>
+                        <div>
+                            <h2 class="section-heading">Kebijakan Privasi (Privacy Policy)</h2>
+                            <span class="last-updated">Kepatuhan Standar Google Play Families Policy & COPPA</span>
+                        </div>
+                    </div>
+                    <button class="btn-print" onclick="window.print()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 6 2 18 2 18 9" />
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                            <rect x="6" y="14" width="12" height="8" />
+                        </svg>
+                        Cetak Dokumen
+                    </button>
+                </div>
+
+                <!-- Callout Box Ringkasan Penting -->
+                <div class="alert-callout success">
+                    <div class="alert-callout-icon">✅</div>
+                    <div class="alert-callout-text">
+                        <h4>Ringkasan Perlindungan Privasi:</h4>
+                        <p>Game <strong>Bebersih</strong> dirancang sebagai game edukasi keluarga dan anak. <strong>Kami
+                                TIDAK mengumpulkan, menyimpan, atau menjual informasi pengenal pribadi (Personal Data)
+                                apa pun dari pemain kami.</strong> Gameplay berjalan 100% secara offline di perangkat
+                            Anda.</p>
+                    </div>
+                </div>
+
+                <div class="alert-callout info">
+                    <div class="alert-callout-icon">ℹ️</div>
+                    <div class="alert-callout-text">
+                        <p><strong>Terakhir Diperbarui:</strong> 29 September 2026 &bull; <strong>Berlaku
+                                Efektif:</strong> Sejak peluncuran aplikasi versi 1.0.0</p>
+                    </div>
+                </div>
+
+                <!-- Klausul 1 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">1</span> Pendahuluan & Identitas Pengembang</h3>
+                    <p>
+                        Kebijakan Privasi ini menjelaskan bagaimana <strong>Qin Studio</strong> ("Pengembang", "Kami",
+                        "Milik Kami") mengelola informasi terkait pengoperasian aplikasi game mobile <strong>Bebersih:
+                            Petualangan Kebersihan!</strong> (selanjutnya disebut "Aplikasi" atau "Game").
+                    </p>
+                    <p>
+                        Kami sangat menghargai kepercayaan Anda dan berkomitmen teguh untuk melindungi privasi setiap
+                        pengguna, khususnya anak-anak usia dini. Kebijakan ini disusun secara transparan agar orang tua,
+                        wali, dan otoritas pengawas memahami bagaimana privasi dijaga sepenuhnya dalam Game ini.
+                    </p>
+                </div>
+
+                <!-- Klausul 2 -->
+                <div class="legal-clause">
+                    <h3>
+                        <span class="clause-num">2</span> Target Audiens & Kepatuhan Privasi Anak (COPPA & GDPR-K)
+                        <span class="badge-verified-inline">COPPA Compliant</span>
+                    </h3>
+                    <p>
+                        Game Bebersih dirancang untuk seluruh kelompok umur (Target Umum), dengan fokus utama pada
+                        **anak-anak usia dini (TK / PAUD, usia 3–7 tahun)**.
+                    </p>
+                    <p>
+                        Sejalan dengan ketentuan hukum internasional termasuk <em>Children's Online Privacy Protection
+                            Act</em> (COPPA) di Amerika Serikat, <em>General Data Protection Regulation</em> (GDPR-K) di
+                        Uni Eropa, serta <strong>Kebijakan Keluarga Google Play (Google Play Families Policy)</strong>:
+                    </p>
+                    <ul>
+                        <li>Kami <strong>tidak dengan sengaja meminta, mengumpulkan, atau meminta data pribadi</strong>
+                            (seperti nama lengkap, alamat rumah, alamat email, nomor telepon, foto pribadi, rekaman
+                            suara, atau lokasi GPS presisi) dari anak-anak di bawah usia 13 tahun (atau batas usia
+                            relevan di yurisdiksi Anda).</li>
+                        <li>Game ini <strong>tidak menyediakan fitur obrolan daring (chatting), forum terbuka, profil
+                                publik, maupun media sosial terintegrasi</strong> yang dapat membuka celah interaksi
+                            anak dengan pihak asing tanpa pengawasan orang tua.</li>
+                    </ul>
+                </div>
+
+                <!-- Klausul 3 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">3</span> Karakteristik Offline & Penyimpanan Data Lokal (Zero PII)</h3>
+                    <p>
+                        Aplikasi <strong>Bebersih beroperasi secara offline</strong>. Kami tidak mengoperasikan server
+                        penyimpanan basis data eksternal untuk melacak identitas pemain.
+                    </p>
+                    <ul>
+                        <li><strong>Data Progres Permainan:</strong> Skor pencapaian 3 bintang, daftar level yang
+                            berhasil dibuka (Level 1 sampai Level 8), dan preferensi audio (suara aktif/nonaktif)
+                            disimpan <strong>secara lokal dan terisolasi pada memori penyimpanan perangkat Anda</strong>
+                            menggunakan mekanisme <em>SharedPreferences</em> internal Android/iOS.</li>
+                        <li><strong>Tanpa Registrasi / Akun:</strong> Pemain tidak perlu membuat akun, mendaftar email,
+                            atau masuk menggunakan akun media sosial apa pun untuk menikmati seluruh fitur permainan.
+                        </li>
+                        <li><strong>Penghapusan Data:</strong> Pengguna atau orang tua memiliki kendali penuh atas data
+                            progres lokal ini. Menghapus data aplikasi melalui menu pengaturan sistem perangkat (*Clear
+                            App Data*) atau mencopot pemasangan (*uninstall*) aplikasi akan langsung menghapus seluruh
+                            data progres secara permanen dari perangkat.</li>
+                    </ul>
+                </div>
+
+                <!-- Klausul 4: Iklan -->
+                <div class="legal-clause">
+                    <h3>
+                        <span class="clause-num">4</span> Kebijakan Iklan Pihak Ketiga (Google AdMob Child-Directed &
+                        Rating G)
+                        <span class="badge-verified-inline">Families Certified Ads</span>
+                    </h3>
+                    <p>
+                        Aplikasi ini menyertakan iklan pihak ketiga untuk mendukung biaya pemeliharaan dan pengembangan
+                        permainan agar tetap dapat diakses secara gratis. Kami bermitra dengan <strong>Google
+                            AdMob</strong> (Google Mobile Ads SDK), sebuah penyedia periklanan yang telah disertifikasi
+                        secara resmi (*self-certified SDK*) oleh Google Play untuk Program Keluarga.
+                    </p>
+                    <p>
+                        Kami memberlakukan konfigurasi teknis yang ketat untuk memastikan seluruh materi iklan aman dan
+                        sesuai untuk anak-anak:
+                    </p>
+                    <ul>
+                        <li><strong>Tag Perlakuan Khusus Anak (Tag for Child-Directed Treatment):</strong> Setiap
+                            permintaan iklan dalam aplikasi ditandai secara programatis dengan
+                            <code>AgeRestrictedTreatment.child</code> dan <code>TagForUnderAgeOfConsent.yes</code>
+                            sesuai arahan COPPA.</li>
+                        <li><strong>Batas Rating Konten Iklan Maksimal "G" (General Audience):</strong> Iklan yang
+                            diizinkan tayang dibatasi secara ketat hanya pada konten berating **G**. Google AdMob
+                            dilarang menampilkan iklan bertema dewasa, kekerasan, perjudian, alkohol, kencan, e-commerce
+                            agresif, atau materi sensitif lainnya.</li>
+                        <li><strong>Hanya Iklan Non-Personal (Non-Personalized Ads Only):</strong> Kami <strong>tidak
+                                mengizinkan pelacakan perilaku (behavioral targeting)</strong>, pelacakan lintas
+                            aplikasi, atau pembuatan profil minat anak. Iklan yang disajikan bersifat kontekstual umum
+                            semata.</li>
+                        <li><strong>Bebas Pengumpulan Pengenal Iklan untuk Profiling:</strong> Aplikasi tidak
+                            memanfaatkan <em>Advertising ID (AAID)</em> atau <em>IDFA</em> untuk melacak profil
+                            anak-anak.</li>
+                        <li><strong>Penempatan yang Aman (Kid-Friendly Placement):</strong>
+                            <ul>
+                                <li><strong>Banner Iklan:</strong> Ditampilkan secara statis di area bawah layar
+                                    landing/menu tanpa menutupi tombol interaktif permainan, mencegah ketidaksengajaan
+                                    klik (*accidental clicks*).</li>
+                                <li><strong>Iklan Antara (Interstitial):</strong> Hanya ditampilkan pada jeda transisi
+                                    alami setelah pemain berhasil menyelesaikan level (*Victory Screen*), dengan
+                                    frekuensi yang dibatasi secara wajar dan tombol tutup yang jelas terbaca. Iklan
+                                    tidak pernah muncul mendadak di tengah anak sedang asyik bermain.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Klausul 5 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">5</span> Layanan Diagnostik & Stabilitas (Firebase Crashlytics)</h3>
+                    <p>
+                        Untuk memastikan game berjalan mulus dan bebas dari gangguan teknis (*bug & crash*) pada
+                        berbagai tipe perangkat seluler, aplikasi menggunakan layanan telemetri dasar dari
+                        <strong>Firebase Crashlytics</strong> (Google LLC):
+                    </p>
+                    <ul>
+                        <li>Informasi yang dikirimkan murni berupa data teknis anonim, seperti jenis model perangkat
+                            keras, versi sistem operasi (misal Android 14), dan jejak baris kode kegagalan (*crash stack
+                            trace*).</li>
+                        <li>Layanan ini <strong>tidak mengumpulkan data identitas pribadi pengguna</strong> dan murni
+                            dimanfaatkan untuk diagnosa stabilitas aplikasi.</li>
+                    </ul>
+                </div>
+
+                <!-- Klausul 6 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">6</span> Izin Perangkat (Device Permissions)</h3>
+                    <p>
+                        Aplikasi <strong>Bebersih</strong> dirancang dengan prinsip minimasi izin (*principle of least
+                        privilege*). Kami <strong>TIDAK meminta izin sensitif</strong> pada perangkat pengguna:
+                    </p>
+                    <ul>
+                        <li>❌ <strong>TIDAK meminta izin Kamera</strong></li>
+                        <li>❌ <strong>TIDAK meminta izin Mikrofon / Rekaman Audio</strong></li>
+                        <li>❌ <strong>TIDAK meminta izin Lokasi GPS Presisi</strong></li>
+                        <li>❌ <strong>TIDAK meminta izin Kontak / Buku Telepon</strong></li>
+                        <li>❌ <strong>TIDAK meminta izin Membaca SMS atau Panggilan</strong></li>
+                        <li>❌ <strong>TIDAK meminta izin Akses Berkas Pribadi / Galeri Foto</strong></li>
+                        <li>✔️ Hanya menggunakan akses penyimpanan lokal standar sistem (aplikasi) untuk menyimpan cache
+                            grafis dan berkas konfigurasi skor game.</li>
+                    </ul>
+                </div>
+
+                <!-- Klausul 7 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">7</span> Hak Orang Tua & Permintaan Terkait Privasi</h3>
+                    <p>
+                        Orang tua dan wali sah memiliki hak penuh atas perlindungan data anak-anak mereka. Meskipun
+                        aplikasi kami tidak mengumpulkan data pribadi di server, Anda berhak:
+                    </p>
+                    <ul>
+                        <li>Menanyakan rincian kepatuhan privasi aplikasi kepada kami setiap saat.</li>
+                        <li>Meminta panduan cara menghapus seluruh riwayat dan progres bermain anak pada perangkat Anda.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Klausul 8 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">8</span> Perubahan pada Kebijakan Privasi Ini</h3>
+                    <p>
+                        Kami dapat meninjau dan memperbarui Kebijakan Privasi ini sewaktu-waktu seiring dengan
+                        penambahan level baru, pembaruan regulasi hukum, atau pemutakhiran kebijakan Google Play Store.
+                    </p>
+                    <p>
+                        Setiap perubahan akan dicantumkan secara terbuka di halaman ini dengan tanggal "Terakhir
+                        Diperbarui" yang disesuaikan di bagian atas dokumen. Kami menyarankan orang tua untuk meninjau
+                        halaman ini secara berkala.
+                    </p>
+                </div>
+
+                <!-- Klausul 9: Kontak -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">9</span> Kontak Resmi & Pengaduan Privasi</h3>
+                    <p>
+                        Jika Anda adalah orang tua, wali, atau pengawas yang memiliki pertanyaan, saran, atau masukan
+                        terkait Kebijakan Privasi ini maupun keamanan anak saat memainkan game Bebersih, silakan
+                        menghubungi kami secara langsung melalui:
+                    </p>
+                    <div class="alert-callout info">
+                        <div class="alert-callout-icon">✉️</div>
+                        <div class="alert-callout-text">
+                            <h4>Kontak Pengembang:</h4>
+                            <p><strong>Studio:</strong> Qin Studio</p>
+                            <p><strong>Pengembang:</strong> Mohammad Rakha Mauludi</p>
+                            <p><strong>Email Kontak:</strong> <a href="mailto:mohammad.rakha@gmail.com"
+                                    style="color: var(--primary); font-weight: 700;">mohammad.rakha@gmail.com</a></p>
+                            <p><strong>Website:</strong> <a href="https://zona284.github.io/" target="_blank"
+                                    rel="noopener"
+                                    style="color: var(--primary); font-weight: 600;">https://zona284.github.io/</a></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- TAB 3: SYARAT & KETENTUAN (TERMS)          -->
+        <!-- ========================================== -->
+        <section id="terms" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-terms">
+
+            <article class="content-card">
+                <div class="tools-bar">
+                    <div class="card-title-group">
+                        <div class="card-title-icon">📜</div>
+                        <div>
+                            <h2 class="section-heading">Syarat & Ketentuan Layanan (Terms & Conditions)</h2>
+                            <span class="last-updated">Ketentuan Penggunaan Aplikasi Game Bebersih</span>
+                        </div>
+                    </div>
+                    <button class="btn-print" onclick="window.print()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 6 2 18 2 18 9" />
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                            <rect x="6" y="14" width="12" height="8" />
+                        </svg>
+                        Cetak Dokumen
+                    </button>
+                </div>
+
+                <div class="alert-callout info">
+                    <div class="alert-callout-icon">ℹ️</div>
+                    <div class="alert-callout-text">
+                        <p><strong>Terakhir Diperbarui:</strong> 29 September 2026 &bull; Berlaku untuk seluruh pengguna
+                            game Bebersih</p>
+                    </div>
+                </div>
+
+                <!-- Terms 1 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">1</span> Penerimaan Ketentuan</h3>
+                    <p>
+                        Dengan mengunduh, menginstal, membuka, atau memainkan game <strong>Bebersih: Petualangan
+                            Kebersihan!</strong>, Anda menyatakan telah membaca, memahami, dan menyetujui untuk terikat
+                        oleh seluruh Syarat & Ketentuan ini.
+                    </p>
+                    <p>
+                        Apabila Anda adalah orang tua atau wali yang mendampingi anak Anda, Anda bertanggung jawab penuh
+                        atas pengawasan penggunaan aplikasi oleh anak Anda sesuai dengan ketentuan ini. Jika Anda tidak
+                        menyetujui ketentuan ini, mohon untuk tidak menggunakan aplikasi ini.
+                    </p>
+                </div>
+
+                <!-- Terms 2 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">2</span> Hak Kekayaan Intelektual</h3>
+                    <p>
+                        Seluruh elemen materi yang terdapat di dalam aplikasi Bebersih—termasuk namun tidak terbatas
+                        pada karakter animasi, desain grafis antarmuka, aset sprite visual, efek suara, komposisi musik,
+                        kode sumber (source code), teks, dan nama merek dagang—adalah hak cipta dan kekayaan intelektual
+                        milik <strong>Qin Studio / Mohammad Rakha Mauludi</strong>, kecuali untuk pustaka pihak ketiga
+                        berlisensi sumber terbuka (open-source) yang digunakan secara sah.
+                    </p>
+                    <ul>
+                        <li>Pengguna <strong>dilarang keras</strong> menyalin, memodifikasi, merekayasa balik (*reverse
+                            engineer*), mendekompilasi, mengekstrak aset grafis/audio, atau mendistribusikan ulang
+                            aplikasi ini untuk tujuan komersial apa pun tanpa persetujuan tertulis eksplisit dari
+                            pengembang.</li>
+                    </ul>
+                </div>
+
+                <!-- Terms 3 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">3</span> Lisensi Penggunaan yang Diberikan</h3>
+                    <p>
+                        Qin Studio memberikan kepada pengguna lisensi yang bersifat pribadi, non-eksklusif, tidak dapat
+                        dipindahtangankan, bebas royalti, dan dapat dicabut sewaktu-waktu semata-mata untuk mengunduh
+                        dan memainkan Game untuk tujuan hiburan dan edukasi non-komersial pada perangkat pribadi yang
+                        sah.
+                    </p>
+                </div>
+
+                <!-- Terms 4 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">4</span> Penafian Jaminan (Disclaimer of Warranties)</h3>
+                    <p>
+                        Aplikasi ini disediakan berdasarkan asas <strong>"SEBAGAIMANA ADANYA" (AS IS)</strong> dan
+                        <strong>"SEBAGAIMANA TERSEDIA" (AS AVAILABLE)</strong> tanpa jaminan apa pun, baik tersurat
+                        maupun tersirat.
+                    </p>
+                    <ul>
+                        <li>Meskipun kami melakukan pengujian komprehensif pada berbagai perangkat Android dan iOS, kami
+                            tidak dapat menjamin bahwa aplikasi akan selalu beroperasi tanpa kesalahan (*bug-free*) atau
+                            kompatibel secara sempurna di seluruh tipe dan spesifikasi perangkat perangkat keras.</li>
+                        <li>Konten edukasi di dalam game ditujukan sebagai sarana motivasi kebiasaan positif dan bukan
+                            sebagai pengganti bimbingan orang tua atau instruksi medis profesional.</li>
+                    </ul>
+                </div>
+
+                <!-- Terms 5 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">5</span> Batasan Tanggung Jawab (Limitation of Liability)</h3>
+                    <p>
+                        Sepanjang diizinkan oleh hukum yang berlaku, Qin Studio tidak bertanggung jawab atas kerugian
+                        langsung, tidak langsung, insidental, atau konsekuensial (termasuk namun tidak terbatas pada
+                        hilangnya data perangkat atau kerusakan fisik perangkat seluler) yang timbul akibat penggunaan
+                        atau ketidakmampuan menggunakan aplikasi ini.
+                    </p>
+                </div>
+
+                <!-- Terms 6 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">6</span> Pembaruan dan Modifikasi</h3>
+                    <p>
+                        Kami berhak secara berkala menambah level permainan baru, memperbarui aset tampilan, memperbaiki
+                        bug, atau melakukan perubahan fitur aplikasi kapan saja demi meningkatkan kenyamanan belajar dan
+                        bermain pengguna tanpa pemberitahuan individual sebelumnya.
+                    </p>
+                </div>
+
+                <!-- Terms 7 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">7</span> Hukum yang Mengatur (Governing Law)</h3>
+                    <p>
+                        Syarat dan Ketentuan ini diatur, ditafsirkan, dan tunduk sepenuhnya pada peraturan
+                        perundang-undangan yang berlaku di <strong>Republik Indonesia</strong>. Setiap perselisihan yang
+                        mungkin timbul dari pelaksanaan ketentuan ini akan diselesaikan secara musyawarah untuk mencapai
+                        mufakat.
+                    </p>
+                </div>
+
+                <!-- Terms 8 -->
+                <div class="legal-clause">
+                    <h3><span class="clause-num">8</span> Hubungi Kami</h3>
+                    <p>
+                        Apabila Anda memiliki pertanyaan atau memerlukan klarifikasi terkait Syarat dan Ketentuan ini,
+                        silakan hubungi tim kami di <a href="mailto:mohammad.rakha@gmail.com"
+                            style="color: var(--primary); font-weight: 700;">mohammad.rakha@gmail.com</a>.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Lightbox Modal for Screenshots -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox(event)" role="dialog" aria-modal="true"
+        aria-hidden="true">
+        <div class="lightbox-dialog" onclick="event.stopPropagation()">
+            <img id="lightboxImg" src="" alt="Screenshot Pratinjau">
+            <div class="lightbox-footer">
+                <span id="lightboxCaption" class="lightbox-title"></span>
+                <button class="lightbox-close-btn" onclick="closeLightbox(event)"
+                    title="Tutup pratinjau">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#profile" onclick="switchTab('profile', event)">Profil Game</a>
+                &bull;
+                <a href="#privacy" onclick="switchTab('privacy', event)">Kebijakan Privasi</a>
+                &bull;
+                <a href="#terms" onclick="switchTab('terms', event)">Syarat & Ketentuan</a>
+                &bull;
+                <a href="index.html">Portofolio Developer</a>
+            </div>
+            <p>&copy; 2026 <strong>Qin Studio</strong> &bull; Dibuat dengan penuh dedikasi oleh <strong>Mohammad Rakha
+                    Mauludi</strong> untuk generasi anak Indonesia yang bersih, sehat, dan ceria!</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts: Tabs, Hash Routing, Soap Bubbles & Lightbox -->
+    <script>
+        // 1. Tab Switching & URL Hash Management
+        function switchTab(tabId, event) {
+            if (event && event.preventDefault) {
+                event.preventDefault();
+            }
+
+            // Hide all panels
+            const panels = document.querySelectorAll('.tab-panel');
+            panels.forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            // Deactivate all tab buttons
+            const tabButtons = document.querySelectorAll('.nav-tab-btn');
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+
+            // Activate target panel
+            const targetPanel = document.getElementById(tabId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+
+            // Activate corresponding button
+            const activeBtn = document.getElementById('tab-btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+                activeBtn.setAttribute('aria-selected', 'true');
+            }
+
+            // Update URL hash without jumping page scroll
+            if (history.pushState) {
+                history.pushState(null, null, '#' + tabId);
+            } else {
+                window.location.hash = tabId;
+            }
+
+            // Scroll gently to top of main content if clicked from bottom
+            if (window.scrollY > 400) {
+                window.scrollTo({ top: 380, behavior: 'smooth' });
+            }
+        }
+
+        // Initialize based on URL hash (e.g. #privacy or #terms or #profile)
+        function initTabFromHash() {
+            const hash = window.location.hash.replace('#', '').toLowerCase();
+            if (hash === 'privacy' || hash === 'privacypolicy' || hash === 'kebijakan-privasi') {
+                switchTab('privacy');
+            } else if (hash === 'terms' || hash === 'syarat-ketentuan') {
+                switchTab('terms');
+            } else {
+                switchTab('profile');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', initTabFromHash);
+        window.addEventListener('hashchange', initTabFromHash);
+
+        // 2. Lightbox Modal
+        function openLightbox(src, caption) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            const cap = document.getElementById('lightboxCaption');
+
+            img.src = src;
+            cap.textContent = caption || 'Pratinjau Permainan Bebersih';
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // 3. Cheerful Ambient Bubbles Animation with interactive Pop effect!
+        (function initBubbles() {
+            const container = document.getElementById('bubbleContainer');
+            if (!container) return;
+
+            const bubbleCount = 14;
+            for (let i = 0; i < bubbleCount; i++) {
+                spawnBubble(container, i * 2);
+            }
+        })();
+
+        function spawnBubble(container, delaySeconds) {
+            const bubble = document.createElement('div');
+            bubble.className = 'ambient-bubble';
+
+            const size = Math.floor(Math.random() * 45) + 25; // 25px - 70px
+            const leftPos = Math.random() * 95; // 0 - 95%
+            const duration = Math.random() * 12 + 14; // 14s - 26s
+
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.left = leftPos + '%';
+            bubble.style.animationDuration = duration + 's';
+            bubble.style.animationDelay = (delaySeconds !== undefined ? delaySeconds : 0) + 's';
+
+            // Click to POP the bubble!
+            bubble.addEventListener('click', function (e) {
+                e.stopPropagation();
+                popBubble(bubble, container);
+            });
+
+            container.appendChild(bubble);
+        }
+
+        function popBubble(bubble, container) {
+            bubble.style.transition = 'all 0.15s ease-out';
+            bubble.style.transform = 'scale(1.6)';
+            bubble.style.opacity = '0';
+            setTimeout(() => {
+                if (bubble.parentNode) {
+                    bubble.parentNode.removeChild(bubble);
+                }
+                // Respawn new bubble after pop
+                spawnBubble(container, 1);
+            }, 150);
+        }
+
+        // 4. Carousel Controllers (Levels & Screenshots)
+        let currentLevelIndex = 0;
+        const totalLevelSlides = 4;
+
+        function updateLevelCarousel() {
+            const track = document.getElementById('levelTrack');
+            const counter = document.getElementById('levelCounter');
+            const dots = document.querySelectorAll('#levelDots .carousel-dot');
+            const prevBtn = document.getElementById('levelPrevBtn');
+            const nextBtn = document.getElementById('levelNextBtn');
+
+            if (track) {
+                track.style.transform = 'translateX(-' + (currentLevelIndex * 100) + '%)';
+            }
+            if (counter) {
+                counter.textContent = 'Level ' + (currentLevelIndex + 1) + ' dari ' + totalLevelSlides;
+            }
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentLevelIndex);
+            });
+            if (prevBtn) prevBtn.disabled = (currentLevelIndex === 0);
+            if (nextBtn) nextBtn.disabled = (currentLevelIndex === totalLevelSlides - 1);
+        }
+
+        function moveLevelSlide(step) {
+            currentLevelIndex = Math.max(0, Math.min(totalLevelSlides - 1, currentLevelIndex + step));
+            updateLevelCarousel();
+        }
+
+        function jumpLevelSlide(index) {
+            currentLevelIndex = Math.max(0, Math.min(totalLevelSlides - 1, index));
+            updateLevelCarousel();
+        }
+
+        let currentScreenshotIndex = 0;
+        const totalScreenshotSlides = 4;
+
+        function updateScreenshotCarousel() {
+            const track = document.getElementById('screenshotTrack');
+            const counter = document.getElementById('screenshotCounter');
+            const dots = document.querySelectorAll('#screenshotDots .carousel-dot');
+            const prevBtn = document.getElementById('screenshotPrevBtn');
+            const nextBtn = document.getElementById('screenshotNextBtn');
+
+            if (track) {
+                track.style.transform = 'translateX(-' + (currentScreenshotIndex * 100) + '%)';
+            }
+            if (counter) {
+                counter.textContent = 'Foto ' + (currentScreenshotIndex + 1) + ' dari ' + totalScreenshotSlides;
+            }
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentScreenshotIndex);
+            });
+            if (prevBtn) prevBtn.disabled = (currentScreenshotIndex === 0);
+            if (nextBtn) nextBtn.disabled = (currentScreenshotIndex === totalScreenshotSlides - 1);
+        }
+
+        function moveScreenshotSlide(step) {
+            currentScreenshotIndex = Math.max(0, Math.min(totalScreenshotSlides - 1, currentScreenshotIndex + step));
+            updateScreenshotCarousel();
+        }
+
+        function jumpScreenshotSlide(index) {
+            currentScreenshotIndex = Math.max(0, Math.min(totalScreenshotSlides - 1, index));
+            updateScreenshotCarousel();
+        }
+
+        // Touch swipe support for smooth mobile interaction
+        function setupCarouselSwipe(viewportId, onSwipeLeft, onSwipeRight) {
+            const el = document.getElementById(viewportId);
+            if (!el) return;
+            let startX = 0;
+            let endX = 0;
+
+            el.addEventListener('touchstart', function(e) {
+                startX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            el.addEventListener('touchend', function(e) {
+                endX = e.changedTouches[0].screenX;
+                const diff = endX - startX;
+                if (Math.abs(diff) > 40) {
+                    if (diff < 0) {
+                        onSwipeLeft();
+                    } else {
+                        onSwipeRight();
+                    }
+                }
+            }, { passive: true });
+        }
+
+        // Initialize Carousels on Load
+        window.addEventListener('DOMContentLoaded', function() {
+            updateLevelCarousel();
+            updateScreenshotCarousel();
+            setupCarouselSwipe('levelViewport', function() { moveLevelSlide(1); }, function() { moveLevelSlide(-1); });
+            setupCarouselSwipe('screenshotViewport', function() { moveScreenshotSlide(1); }, function() { moveScreenshotSlide(-1); });
+        });
+    </script>
+</body>
+
+</html>
