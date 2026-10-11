@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mohammad Rakha Mauludi — Mobile & Web Engineer</title>
+    <meta name="description" content="Portfolio of Mohammad Rakha Mauludi, a software engineer building Android, iOS, Flutter and web apps.">
+    <meta name="theme-color" content="#0b0d12">
+    <meta property="og:title" content="Mohammad Rakha Mauludi — Mobile & Web Engineer">
+    <meta property="og:description" content="Android, iOS, Flutter and web apps. 5+ years building useful products.">
+    <meta property="og:image" content="https://zona284.github.io/img/bebersih/feature_graphic_1024x500.png">
+    <link rel="icon" type="image/png" href="img/bebersih/icon_512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf9;
+            --surface: #ffffff;
+            --surface-2: #f3f4f6;
+            --text: #0f172a;
+            --muted: #64748b;
+            --border: #e5e7eb;
+            --accent: #4f46e5;
+            --accent-2: #06b6d4;
+            --accent-soft: rgba(79, 70, 229, .08);
+            --shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 12px 32px -12px rgba(15, 23, 42, .12);
+            --radius: 20px;
+            --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            --font-display: 'Space Grotesk', var(--font);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #0b0d12;
+                --surface: #12151c;
+                --surface-2: #181c25;
+                --text: #f1f5f9;
+                --muted: #94a3b8;
+                --border: #232837;
+                --accent: #818cf8;
+                --accent-soft: rgba(129, 140, 248, .12);
+                --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px -12px rgba(0, 0, 0, .6);
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --bg: #0b0d12;
+            --surface: #12151c;
+            --surface-2: #181c25;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #232837;
+            --accent: #818cf8;
+            --accent-soft: rgba(129, 140, 248, .12);
+            --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px -12px rgba(0, 0, 0, .6);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            transition: background .25s, color .25s;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        .wrap { width: min(1080px, 100% - 40px); margin-inline: auto; }
+        .gradient-text {
+            background: linear-gradient(120deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Nav */
+        .nav {
+            position: sticky; top: 0; z-index: 50;
+            background: color-mix(in srgb, var(--bg) 80%, transparent);
+            backdrop-filter: saturate(180%) blur(14px);
+            -webkit-backdrop-filter: saturate(180%) blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .brand { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; letter-spacing: -.01em; }
+        .brand span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; gap: 4px; }
+        .nav-links a {
+            padding: 8px 14px; border-radius: 999px;
+            font-size: .9rem; font-weight: 500; color: var(--muted);
+            transition: color .2s, background .2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--surface-2); }
+        .icon-btn {
+            width: 38px; height: 38px; display: grid; place-items: center;
+            border-radius: 50%; border: 1px solid var(--border); background: var(--surface);
+            color: var(--text); cursor: pointer; margin-left: 8px;
+            transition: transform .2s, border-color .2s;
+        }
+        .icon-btn:hover { transform: rotate(15deg); border-color: var(--accent); }
+        .icon-btn svg { width: 18px; height: 18px; }
+
+        /* Hero */
+        .hero { position: relative; overflow: hidden; padding: 88px 0 72px; }
+        .hero::before {
+            content: ""; position: absolute; inset: -20% -10% auto auto; width: 620px; height: 620px;
+            background: radial-gradient(circle, var(--accent-soft), transparent 65%);
+            pointer-events: none;
+        }
+        .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; position: relative; }
+        .badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 14px; border-radius: 999px;
+            border: 1px solid var(--border); background: var(--surface);
+            font-size: .82rem; font-weight: 500; color: var(--muted);
+        }
+        .badge i { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34, 197, 94, .18); }
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 5.4vw, 4rem);
+            line-height: 1.05; letter-spacing: -.03em; margin: 22px 0 20px;
+        }
+        .lead { font-size: 1.1rem; color: var(--muted); max-width: 520px; }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 22px; border-radius: 999px;
+            font-weight: 600; font-size: .95rem;
+            border: 1px solid var(--border); background: var(--surface);
+            transition: transform .2s, box-shadow .2s, border-color .2s;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+        .btn svg { width: 18px; height: 18px; }
+
+        .hero-visual { position: relative; height: 460px; }
+        .hero-visual img {
+            position: absolute; width: 46%; border-radius: 28px;
+            filter: drop-shadow(0 24px 40px rgba(15, 23, 42, .28));
+            transition: transform .4s ease;
+        }
+        .hero-visual img:nth-child(1) { left: 2%; top: 40px; transform: rotate(-6deg); }
+        .hero-visual img:nth-child(2) { left: 28%; top: 0; z-index: 2; }
+        .hero-visual img:nth-child(3) { right: 0; top: 60px; transform: rotate(6deg); }
+        .hero-visual:hover img:nth-child(1) { transform: rotate(-9deg) translateX(-8px); }
+        .hero-visual:hover img:nth-child(3) { transform: rotate(9deg) translateX(8px); }
+
+        /* Sections */
+        section { padding: 72px 0; }
+        .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+        h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+            letter-spacing: -.02em; line-height: 1.15; margin: 10px 0 16px;
+        }
+        .section-head { max-width: 620px; margin-bottom: 40px; }
+        .section-head p { color: var(--muted); }
+
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: start; }
+        .about-grid p { color: var(--muted); font-size: 1.05rem; }
+        .about-grid p + p { margin-top: 14px; }
+        .card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow);
+        }
+        .card h3 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 16px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+        .chip {
+            padding: 6px 14px; border-radius: 999px;
+            background: var(--surface-2); border: 1px solid var(--border);
+            font-size: .85rem; font-weight: 500;
+        }
+        .chip.accent { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+        .stat { text-align: center; padding: 14px 8px; border-radius: 14px; background: var(--surface-2); }
+        .stat b { display: block; font-family: var(--font-display); font-size: 1.5rem; }
+        .stat span { font-size: .75rem; color: var(--muted); }
+
+        /* Featured project */
+        .featured {
+            display: grid; grid-template-columns: 1.1fr .9fr;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 28px; overflow: hidden; box-shadow: var(--shadow);
+        }
+        .featured-media { background: #e0f2fe; position: relative; min-height: 280px; }
+        .featured-media img { width: 100%; height: 100%; object-fit: cover; }
+        .featured-body { padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+        .featured-body h3 { font-family: var(--font-display); font-size: 1.7rem; letter-spacing: -.02em; line-height: 1.2; margin: 8px 0 12px; }
+        .featured-body p { color: var(--muted); margin-bottom: 20px; }
+        .featured-body .chips { margin-bottom: 24px; }
+        .thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+        .thumbs button {
+            border: 1px solid var(--border); border-radius: 14px; overflow: hidden; padding: 0;
+            background: var(--surface); cursor: zoom-in; aspect-ratio: 16/9;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .thumbs button:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+        .thumbs img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Projects */
+        .project { padding: 36px 0; border-top: 1px solid var(--border); }
+        .project:first-of-type { border-top: 0; padding-top: 0; }
+        .project-info { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; margin-bottom: 28px; }
+        .project-info h3 { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: -.01em; line-height: 1.25; margin-top: 6px; }
+        .project-info p { color: var(--muted); margin-bottom: 14px; }
+        .num { font-family: var(--font-display); font-size: .85rem; color: var(--accent); font-weight: 600; }
+        .shots { display: grid; gap: 16px; }
+        .shots.cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .shots.cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .shot {
+            border: 1px solid var(--border); border-radius: var(--radius);
+            background: linear-gradient(160deg, var(--surface-2), var(--surface));
+            padding: 20px; cursor: zoom-in; display: grid; place-items: center;
+            transition: transform .25s, box-shadow .25s, border-color .25s;
+        }
+        .shot:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent); }
+        .shot img { width: 100%; height: 100%; object-fit: contain; border-radius: 12px; }
+        .shots.phones .shot { align-items: start; }
+        .shots.phones .shot img { width: 100%; height: auto; }
+        .shots.cols-3, .shots.cols-2 { align-items: stretch; }
+        .shot { min-width: 0; }
+        .shots.squares .shot { aspect-ratio: 1; padding: 12px; }
+
+        /* Contact */
+        .contact { text-align: center; }
+        .contact-card {
+            border-radius: 32px; padding: 64px 24px;
+            background: linear-gradient(135deg, #111827, #1e1b4b);
+            color: #f8fafc; position: relative; overflow: hidden;
+        }
+        .contact-card::before {
+            content: ""; position: absolute; width: 420px; height: 420px; right: -120px; top: -160px;
+            background: radial-gradient(circle, rgba(6, 182, 212, .35), transparent 65%);
+        }
+        .contact-card > * { position: relative; }
+        .contact-card h2 { margin-top: 0; }
+        .contact-card p { color: #cbd5e1; max-width: 460px; margin: 0 auto 28px; }
+        .contact-card .actions { justify-content: center; margin-top: 0; }
+        .contact-card .btn { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .18); color: #fff; }
+        .contact-card .btn.primary { background: #fff; color: #0f172a; border-color: #fff; }
+
+        footer { padding: 32px 0 48px; color: var(--muted); font-size: .85rem; }
+        footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+        footer a:hover { color: var(--accent); }
+
+        /* Lightbox */
+        dialog {
+            border: 0; background: transparent; max-width: 100vw; max-height: 100vh;
+            width: 100vw; height: 100vh; padding: 24px;
+        }
+        dialog[open] { display: grid; place-items: center; }
+        dialog::backdrop { background: rgba(5, 8, 15, .86); backdrop-filter: blur(6px); }
+        dialog img { max-width: min(92vw, 1100px); max-height: 86vh; object-fit: contain; border-radius: 14px; }
+        .lb-btn {
+            position: fixed; width: 44px; height: 44px; border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, .25); background: rgba(255, 255, 255, .1);
+            color: #fff; font-size: 1.3rem; cursor: pointer; display: grid; place-items: center;
+            transition: background .2s;
+        }
+        .lb-btn:hover { background: rgba(255, 255, 255, .22); }
+        .lb-close { top: 20px; right: 20px; }
+        .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+        .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+        /* Reveal */
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+        .reveal.in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+
+        /* Responsive */
+        @media (max-width: 860px) {
+            .hero { padding: 56px 0 40px; }
+            .hero .wrap, .about-grid, .featured, .project-info { grid-template-columns: 1fr; }
+            .hero-visual { height: 380px; order: -1; max-width: 420px; margin-inline: auto; width: 100%; }
+            .featured-media { aspect-ratio: 2/1; min-height: 0; }
+            .featured-body { padding: 28px; }
+            .project-info { gap: 8px; }
+            section { padding: 52px 0; }
+        }
+        @media (max-width: 600px) {
+            .nav-links a:not(.icon-btn) { display: none; }
+            .nav-links a.keep { display: inline-block; }
+            .shots.cols-3 { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .shots.cols-3 .shot { padding: 8px; border-radius: 12px; }
+            .thumbs { grid-template-columns: repeat(2, 1fr); }
+            .contact-card { padding: 48px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <div class="wrap">
+            <a href="#top" class="brand">rakha<span>.dev</span></a>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#featured">Featured</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="keep">Contact</a>
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <div class="hero">
+            <div class="wrap">
+                <div class="reveal">
+                    <span class="badge"><i></i> Open to interesting projects</span>
+                    <h1>I build <span class="gradient-text">mobile &amp; web apps</span> people actually use.</h1>
+                    <p class="lead">Hi, I'm Rakha — a software engineer with 5+ years of experience shipping Android, iOS and web products to the Play Store and App Store.</p>
+                    <div class="actions">
+                        <a href="#projects" class="btn primary">View projects
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a href="#contact" class="btn">Get in touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal" aria-hidden="true">
+                    <img src="img/gallery1/jb1_iphone12black_portrait.png" alt="">
+                    <img src="img/gallery1/jb2_iphone12black_portrait.png" alt="">
+                    <img src="img/gallery1/jb3_iphone12black_portrait.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <section id="about">
+            <div class="wrap about-grid">
+                <div class="reveal">
+                    <span class="eyebrow">About</span>
+                    <h2>Passionate about building useful products.</h2>
+                    <p>I'm passionate about Android, iOS and website development, and I love turning ideas into products that solve real problems.</p>
+                    <p>Recently I've been working with Kotlin for Android, Swift for iOS, Flutter for cross-platform, and VueJS for the web.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Tech I use</h3>
+                    <div class="chips">
+                        <span class="chip accent">Kotlin</span>
+                        <span class="chip accent">Swift</span>
+                        <span class="chip accent">Flutter</span>
+                        <span class="chip accent">VueJS</span>
+                        <span class="chip">Android</span>
+                        <span class="chip">iOS</span>
+                        <span class="chip">Web</span>
+                    </div>
+                    <div class="stats">
+                        <div class="stat"><b>5+</b><span>Years</span></div>
+                        <div class="stat"><b>3</b><span>Platforms</span></div>
+                        <div class="stat"><b>2</b><span>App stores</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Featured</span>
+                    <h2>Bebersih: Petualangan Kebersihan!</h2>
+                </div>
+                <article class="featured reveal">
+                    <div class="featured-media">
+                        <img src="img/bebersih/feature_graphic_1024x500.png" alt="Bebersih game feature graphic" loading="lazy">
+                    </div>
+                    <div class="featured-body">
+                        <span class="eyebrow">Educational game</span>
+                        <h3>Learning clean habits through play.</h3>
+                        <p>A 2D educational game for kids and families — washing dishes, tidying toys, brushing teeth and sorting waste. 100% offline and child-friendly.</p>
+                        <div class="chips">
+                            <span class="chip">Flutter</span>
+                            <span class="chip">Offline</span>
+                            <span class="chip">Family-safe</span>
+                        </div>
+                        <div class="actions" style="margin-top:0">
+                            <a href="bebersih.html" class="btn primary">Game profile</a>
+                            <a href="tnc_privacy_a_way_to_clean.html" class="btn">Privacy</a>
+                        </div>
+                    </div>
+                </article>
+                <div class="thumbs" data-gallery>
+                    <button type="button" data-full="img/bebersih/screenshot_1_cuci_piring.png"><img src="img/bebersih/screenshot_1_cuci_piring.png" alt="Bebersih: washing dishes" loading="lazy"></button>
+                    <button type="button" data-full="img/bebersih/screenshot_2_rapi_mainan.png"><img src="img/bebersih/screenshot_2_rapi_mainan.png" alt="Bebersih: tidying toys" loading="lazy"></button>
+                    <button type="button" data-full="img/bebersih/screenshot_3_sikat_gigi.png"><img src="img/bebersih/screenshot_3_sikat_gigi.png" alt="Bebersih: brushing teeth" loading="lazy"></button>
+                    <button type="button" data-full="img/bebersih/screenshot_4_pilah_sampah.png"><img src="img/bebersih/screenshot_4_pilah_sampah.png" alt="Bebersih: sorting waste" loading="lazy"></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Projects</span>
+                    <h2>Selected work</h2>
+                    <p>A record of projects I've been working on, from native apps to cross-platform.</p>
+                </div>
+
+                <article class="project reveal">
+                    <div class="project-info">
+                        <div>
+                            <span class="num">01</span>
+                            <h3>Transactional Apps (with Maps)</h3>
+                        </div>
+                        <div>
+                            <p>An application that helps people find the nearest place and use its services. Built natively on Android and iOS, published on Google Play Store and Apple App Store.</p>
+                            <div class="chips"><span class="chip">Android</span><span class="chip">iOS</span><span class="chip">Maps</span></div>
+                        </div>
+                    </div>
+                    <div class="shots phones cols-3" data-gallery>
+                        <button type="button" class="shot" data-full="img/gallery1/jb1_iphone12black_portrait.png"><img src="img/gallery1/jb1_iphone12black_portrait.png" alt="Transactional app screen 1" loading="lazy"></button>
+                        <button type="button" class="shot" data-full="img/gallery1/jb2_iphone12black_portrait.png"><img src="img/gallery1/jb2_iphone12black_portrait.png" alt="Transactional app screen 2" loading="lazy"></button>
+                        <button type="button" class="shot" data-full="img/gallery1/jb3_iphone12black_portrait.png"><img src="img/gallery1/jb3_iphone12black_portrait.png" alt="Transactional app screen 3" loading="lazy"></button>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project-info">
+                        <div>
+                            <span class="num">02</span>
+                            <h3>Monitoring &amp; Reporting Apps</h3>
+                        </div>
+                        <div>
+                            <p>An application that helps internal staff control and monitor business services. Built natively on Android and published on Google Play Store.</p>
+                            <div class="chips"><span class="chip">Android</span><span class="chip">Internal tool</span></div>
+                        </div>
+                    </div>
+                    <div class="shots squares cols-2" data-gallery>
+                        <button type="button" class="shot" data-full="img/gallery1/ss1.png"><img src="img/gallery1/ss1.png" alt="Monitoring app screen 1" loading="lazy"></button>
+                        <button type="button" class="shot" data-full="img/gallery1/ss2.png"><img src="img/gallery1/ss2.png" alt="Monitoring app screen 2" loading="lazy"></button>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project-info">
+                        <div>
+                            <span class="num">03</span>
+                            <h3>Form Entry Flutter App</h3>
+                        </div>
+                        <div>
+                            <p>Using a single codebase, this application runs on both Android and iOS. Published on Google Play Store.</p>
+                            <div class="chips"><span class="chip">Flutter</span><span class="chip">Cross-platform</span></div>
+                        </div>
+                    </div>
+                    <div class="shots squares cols-2" data-gallery>
+                        <button type="button" class="shot" data-full="img/gallery1/ff1.png"><img src="img/gallery1/ff1.png" alt="Form entry app screen 1" loading="lazy"></button>
+                        <button type="button" class="shot" data-full="img/gallery1/ff2.png"><img src="img/gallery1/ff2.png" alt="Form entry app screen 2" loading="lazy"></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="wrap">
+                <div class="contact-card reveal">
+                    <h2>Thanks for visiting!</h2>
+                    <p>Check out my other personal activities, or reach me on LinkedIn for professional enquiries.</p>
+                    <div class="actions">
+                        <a href="https://www.linkedin.com/in/rakhamauludi" class="btn primary" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.200 2.1 2.1 0 0 1 0 4.200zM7.1 20.5H3.600V9h3.500v11.500z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/zona284/" class="btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.500 11.500 0 0 0-3.640 22.410c.58.110.79-.25.79-.56v-2c-3.200.7-3.880-1.360-3.880-1.360-.52-1.330-1.280-1.690-1.280-1.690-1.040-.71.080-.7.080-.7 1.150.08 1.760 1.180 1.760 1.180 1.030 1.760 2.700 1.250 3.360.96.100-.75.400-1.250.730-1.540-2.550-.29-5.240-1.280-5.240-5.680 0-1.250.450-2.280 1.180-3.080-.12-.29-.51-1.460.11-3.040 0 0 .97-.31 3.170 1.180a11 11 0 0 1 5.780 0c2.200-1.490 3.170-1.180 3.170-1.180.62 1.580.23 2.750.11 3.040.74.800 1.180 1.830 1.180 3.080 0 4.410-2.690 5.390-5.260 5.670.41.360.78 1.060.78 2.140v3.170c0 .31.210.68.800.56A11.500 11.500 0 0 0 12 .5z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="https://rakhamauludi.medium.com/" class="btn" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.540 12a6.800 6.800 0 1 1-6.800-6.800 6.800 6.800 0 0 1 6.800 6.800zm7.420 0c0 3.540-1.510 6.400-3.380 6.400S14.200 15.540 14.200 12s1.510-6.400 3.380-6.400 3.380 2.860 3.380 6.400zM24 12c0 3.170-.53 5.750-1.190 5.750S21.620 15.170 21.620 12s.53-5.750 1.190-5.750S24 8.830 24 12z"/></svg>
+                            Medium
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; <span id="year"></span> Mohammad Rakha Mauludi</span>
+            <a href="index.html">Classic version</a>
+        </div>
+    </footer>
+
+    <dialog id="lightbox" aria-label="Image viewer">
+        <img id="lbImg" alt="">
+        <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="lb-btn lb-prev" type="button" aria-label="Previous">&#8249;</button>
+        <button class="lb-btn lb-next" type="button" aria-label="Next">&#8250;</button>
+    </dialog>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var saved = localStorage.getItem('theme');
+            if (saved) root.setAttribute('data-theme', saved);
+
+            document.getElementById('themeToggle').addEventListener('click', function () {
+                var isDark = root.getAttribute('data-theme') === 'dark' ||
+                    (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+                var next = isDark ? 'light' : 'dark';
+                root.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+            var links = document.querySelectorAll('.nav-links a[href^="#"]');
+            var spy = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (!e.isIntersecting) return;
+                    links.forEach(function (a) {
+                        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+                    });
+                });
+            }, { rootMargin: '-45% 0px -50% 0px' });
+            document.querySelectorAll('section[id]').forEach(function (s) { spy.observe(s); });
+
+            var dlg = document.getElementById('lightbox');
+            var img = document.getElementById('lbImg');
+            var items = [], idx = 0;
+
+            function show(i) {
+                idx = (i + items.length) % items.length;
+                img.src = items[idx].dataset.full;
+                img.alt = items[idx].querySelector('img').alt;
+            }
+
+            document.querySelectorAll('[data-gallery]').forEach(function (g) {
+                var btns = Array.prototype.slice.call(g.querySelectorAll('button[data-full]'));
+                btns.forEach(function (b, i) {
+                    b.addEventListener('click', function () {
+                        items = btns;
+                        show(i);
+                        dlg.showModal();
+                    });
+                });
+            });
+
+            dlg.querySelector('.lb-close').addEventListener('click', function () { dlg.close(); });
+            dlg.querySelector('.lb-prev').addEventListener('click', function () { show(idx - 1); });
+            dlg.querySelector('.lb-next').addEventListener('click', function () { show(idx + 1); });
+            dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+            dlg.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') show(idx - 1);
+                if (e.key === 'ArrowRight') show(idx + 1);
+            });
+        })();
+    </script>
+</body>
+</html>
